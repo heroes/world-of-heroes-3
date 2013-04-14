@@ -69,10 +69,7 @@ exports.signup = {
             user.email = email;
             user.save(function(){
                 req.session.user = user;
-                res.render('sign/signup', {
-                    success: '注册成功',
-                    user : user
-                });
+                res.redirect('/index');
             });
         });
     }
