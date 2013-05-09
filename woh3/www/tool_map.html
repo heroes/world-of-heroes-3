@@ -1,0 +1,54 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>地图数据生成器</title>
+  <style>
+    body{
+      background: black;
+      color:green;
+    }
+    .container{
+      width:960px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="container">
+    <div>
+      <label for="width">输入地图宽度</label>
+      <input type="text" name="width" id="width"/>
+      <label for="height">输入地图高度</label>
+      <input type="text" name="height" id="height"/>
+      <button id="compute">计算地图数据</button>
+    </div>
+    <div>
+      <label>地图数据</label>
+      <textarea id="map-data"></textarea>
+    </div>
+  </form>
+</body>
+<script>
+  (function(){
+    var _w = document.getElementById("width"),
+        _h = document.getElementById("height"),
+        map = document.getElementById("map-data");
+    document.getElementById("compute").addEventListener("click",function(e){
+      e.preventDefault();
+      var map_config = {
+        width:_w.value,
+        height:_h.value,
+        edge:"block",
+        block:[],//地图上的障碍物
+        decorate:[],//地图上的装饰
+      };
+      map.value = JSON.stringify(map_config);
+    },false);
+  })();
+</script>
+</html>

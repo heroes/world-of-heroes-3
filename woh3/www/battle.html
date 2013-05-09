@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="viewport" content="user-scalable=no, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+      <link rel="stylesheet" type="text/css" href="css/global.css"/>
+      <link rel="stylesheet" type="text/css" href="css/battle.css"/>
+      <title>World Of Heroes3</title>
+    </head>
+    
+    <body>
+      <div class="container">
+        <canvas id="ctx-ground" style="background:black"></canvas><!--背景层-->
+        <canvas id="ctx-role"></canvas><!--人物层-->
+        <canvas id="ctx-item"></canvas><!--道具层-->
+      </div>
+    </body>
+
+    <!-- 导入依赖库（包括第三方的和自定义的）-->
+    <script type="text/javascript" src="js/quo.js"></script>
+    <script type="text/javascript" src="js/_MAP.js"></script>
+    <script type="text/javascript" src="js/_FUNC.js"></script>
+
+    <!-- 导入游戏初始化和各种配置文件 -->
+    <script type="text/javascript" src="js/woh.init.js"></script>
+    <script type="text/javascript" src="js/config.map.js"></script>
+    <script type="text/javascript" src="js/config.resource.js"></script>
+
+    <!-- 战斗控制等部分 -->
+    <script type="text/javascript" src="js/battle.js"></script>
+
+</html>
